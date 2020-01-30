@@ -25,7 +25,7 @@ class PatternSVG {
       'width': this.SVG_WIDTH,
       'height': this.SVG_WIDTH
     })
-    this.el.appendChild(rect)
+    // this.el.appendChild(rect)
     return rect
   }
 
@@ -96,7 +96,7 @@ class PatternSVG {
    */
   addGroup (attr, content) {
     let group = dom.create('g', attr, content)
-    this.el.appendChild(group)
+    // this.el.appendChild(group)
     return group
   }
 

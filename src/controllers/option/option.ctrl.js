@@ -51,7 +51,7 @@ class OptionCtrl {
       }, choice.label)
       option.addEventListener('click', listener)
       option.addEventListener('touchstart', listener)
-      this.el.appendChild(option)
+      // this.el.appendChild(option)
 
       if (choice.default)
         this.selectFromTag(option)

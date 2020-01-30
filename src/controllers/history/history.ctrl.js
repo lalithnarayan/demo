@@ -70,7 +70,7 @@ class HistoryCtrl {
       class: 'history-container',
       'data-helper': helperText
     });
-    this.el.appendChild(this.containerEl);
+    // this.el.appendChild(this.containerEl);
   }
 }
 
