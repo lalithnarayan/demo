@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PikaDay2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="theme-color" content="#14171b">
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <link rel="apple-touch-icon" href="assets/icons/ios-180x180.png">
+    <link rel="apple-touch-startup-image" href="assets/ios-startup/startup-640x1136.png" media="device-width: 375px">
+    <link rel="apple-touch-startup-image" href="assets/ios-startup/startup-1080x1920.png" media="device-width: 414px">
+    <link rel="apple-touch-startup-image" href="assets/ios-startup/startup-640x1136.png" media="(device-width: 320px) and (device-height: 568px)">
+    <link rel="apple-touch-startup-image" href="assets/ios-startup/startup-640x960.png"  media="(device-width: 320px) and (device-height: 480px)">
+    
+    <meta name="apple-mobile-web-app-title" content="PikaDay2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta name="msapplication-TileImage" content="assets/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#14171b">
+
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+
+  <body>
+    <div style="position: fixed; left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;">
+    <iframe style="width: 100%; height: 100%;" src="https://xd.adobe.com/view/43d296be-ff0b-4388-48ae-686bb98a6c37-35e3/?fullscreen"></iframe>
+    </div>
+
+    <noscript>
+      <!--[if lte IE 6]>
+        <p>
+          If you read this it's probably because the world has rebooted. I don't know how but you arrived here. I'm sorry you cannot enjoy this little game but you will be able to in the not too distant future. Browsers will become incredibly better. Just before the world turns into chaos due to Nutella production shortages. Scientists will realise too late that Nutella was to humans what pollen is to bees. Don't believe the hype, the end didn't (or won't) happen because the 'left-pad' package got removed from NPM. Good luck.
+        </p>
+        <p>
+          PS: If the world has ended, please tell thejameskyle that I loved him. Only his cat can save the world. (Shut the door)
+        </p>
+      <![endif]-->  
+    </noscript>
+
+    <script src="app.js"></script>
+    <script type="text/javascript">
+
+      // Set up service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('service-worker.js', {scope: '.'});
+      }
+
+      // Easter Egg to get it full black
+      // Awesome for OLED screens
+      if (localStorage.getItem('isDeepBlack')) {
+        document.body.classList.add('deepblack')
+      }
+    </script>
+  </body>
+</html>
